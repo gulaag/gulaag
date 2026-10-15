@@ -28,9 +28,10 @@
       .s{fill:#9CA3AF}
       .live{animation:live 1.6s ease-in-out infinite}
       @keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
-      .step{opacity:.35;animation:step 6s linear infinite}
+      .step{animation:step 6s linear infinite}
       .k1{animation-delay:0s}.k2{animation-delay:1.5s}.k3{animation-delay:3s}.k4{animation-delay:4.5s}
-      @keyframes step{0%,25%{opacity:1}30%,100%{opacity:.35}}
+      @keyframes step{0%,25%{opacity:1}30%,100%{opacity:.5}}
+      @media (prefers-reduced-motion:reduce){*{animation:none!important}}
     </style>
   </defs>
 

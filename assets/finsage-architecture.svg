@@ -22,6 +22,7 @@
       @keyframes flow{to{stroke-dashoffset:-22}}
       .h{font-weight:700;fill:#F3F4F6}
       .s{fill:#9CA3AF}
+      @media (prefers-reduced-motion:reduce){*{animation:none!important}}
     </style>
   </defs>
 

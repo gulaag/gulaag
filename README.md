@@ -125,6 +125,10 @@ A tool-calling agent that answers questions about 30 large-cap companies from **
 
 ## 🛠️ Stack
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,ts,java,cpp,fastapi,react,tailwind,postgres,docker,kubernetes,gcp,aws,terraform,githubactions,linux,git&perline=16" alt="Python, TypeScript, Java, C++, FastAPI, React, Tailwind, PostgreSQL, Docker, Kubernetes, GCP, AWS, Terraform, GitHub Actions, Linux, Git">
+</p>
+
 <table>
 <tr><td><b>LLMs & agents</b></td><td><img src="https://img.shields.io/badge/Claude-191919?style=flat-square&logo=anthropic&logoColor=white" alt="Anthropic"> <img src="https://img.shields.io/badge/Llama_3.3_70B-0467DF?style=flat-square&logo=meta&logoColor=white" alt="Meta"> <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama"> <img src="https://img.shields.io/badge/Function_calling-7C3AED?style=flat-square" alt="Function calling"> <img src="https://img.shields.io/badge/ReAct_loops-7C3AED?style=flat-square" alt="ReAct"> <img src="https://img.shields.io/badge/Guardrails-7C3AED?style=flat-square" alt="Guardrails"></td></tr>
 <tr><td><b>Retrieval & evals</b></td><td><img src="https://img.shields.io/badge/Databricks_Vector_Search-FF3621?style=flat-square&logo=databricks&logoColor=white" alt="Vector Search"> <img src="https://img.shields.io/badge/BGE--large_embeddings-0EA5E9?style=flat-square" alt="BGE"> <img src="https://img.shields.io/badge/MLflow_Evaluate_%26_Tracing-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow"> <img src="https://img.shields.io/badge/LLM--as--a--judge-0EA5E9?style=flat-square" alt="LLM judge"></td></tr>
