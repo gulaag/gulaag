@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="t d">
+  <title id="t">MIERU architecture</title>
+  <desc id="d">Multi-tenant KPI management SaaS live at mieru.info. A React and TypeScript single-page app with 181 components calls a FastAPI backend with 99 REST endpoints across 18 modules, protected by JWT, CSRF and organization-level role-based access control, backed by PostgreSQL with 13 tables and 41 Alembic migrations. Integrations: Stripe billing, Firebase Auth, Cloud Storage, Mailgun. An AI Growth Coach pipeline sanitizes input, calls Llama 3.3 70B, and validates the response for invented numbers. Deployed with Docker, Cloud Build and Cloud Run in staging and production.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="api" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#064E3B"/>
+      <stop offset="1" stop-color="#0C4A6E"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E1065"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+    </marker>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+      .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+      .box{fill:#111827;stroke:#374151;stroke-width:1.2}
+      .wire{fill:none;stroke:#374151;stroke-width:1.6}
+      .flow{fill:none;stroke-width:2.4;stroke-dasharray:8 14;animation:flow 1.4s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-22}}
+      .h{font-weight:700;fill:#F3F4F6}
+      .s{fill:#9CA3AF}
+      .live{animation:live 1.6s ease-in-out infinite}
+      @keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
+      .step{opacity:.35;animation:step 6s linear infinite}
+      .k1{animation-delay:0s}.k2{animation-delay:1.5s}.k3{animation-delay:3s}.k4{animation-delay:4.5s}
+      @keyframes step{0%,25%{opacity:1}30%,100%{opacity:.35}}
+    </style>
+  </defs>
+
+  <rect width="1280" height="560" rx="20" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1279" height="559" rx="20" fill="none" stroke="#1F2937"/>
+  <text x="48" y="52" class="mono" font-size="14" fill="#34D399" letter-spacing="2">PRODUCTION SAAS · MIERU</text>
+  <circle class="live" cx="1112" cy="47" r="5" fill="#22C55E"/>
+  <text x="1124" y="52" class="mono" font-size="13" fill="#86EFAC">live · mieru.info</text>
+
+  <!-- Tenants -->
+  <g class="sans">
+    <rect class="box" x="48" y="84" width="200" height="132" rx="14"/>
+    <text x="68" y="114" font-size="15" class="h">Client orgs</text>
+    <text x="68" y="138" font-size="13" class="s">multi-tenant</text>
+    <text x="68" y="158" font-size="13" class="s">KGI · CSF · KPI boards</text>
+    <text x="68" y="194" font-size="20" font-weight="800" fill="#86EFAC">3K+ MAU</text>
+  </g>
+
+  <!-- Frontend -->
+  <g class="sans">
+    <rect class="box" x="300" y="84" width="250" height="132" rx="14" stroke="#1D4ED8"/>
+    <text x="320" y="114" font-size="15" class="h">React + TypeScript SPA</text>
+    <text x="320" y="140" font-size="22" font-weight="800" fill="#93C5FD">181<tspan font-size="13" font-weight="500" fill="#9CA3AF"> components</tspan></text>
+    <text x="320" y="166" font-size="13" class="s">React Query · react-hook-form</text>
+    <text x="320" y="186" font-size="13" class="s">MUI · Tailwind · Recharts</text>
+    <text x="320" y="204" font-size="13" class="s">Storybook · MSW</text>
+  </g>
+
+  <!-- API -->
+  <g class="sans">
+    <rect x="602" y="84" width="300" height="132" rx="14" fill="url(#api)" stroke="#10B981" stroke-width="1.5"/>
+    <text x="622" y="114" font-size="15" class="h">FastAPI backend</text>
+    <text x="622" y="140" font-size="22" font-weight="800" fill="#6EE7B7">99<tspan font-size="13" font-weight="500" fill="#D1FAE5"> REST endpoints · 18 modules</tspan></text>
+    <text x="622" y="166" font-size="13" fill="#D1FAE5">JWT · CSRF · scrypt · org-level RBAC</text>
+    <text x="622" y="186" font-size="13" fill="#D1FAE5">SQLAlchemy · Pydantic · admin API</text>
+    <text x="622" y="204" font-size="13" fill="#D1FAE5">batch jobs · CSV import / export</text>
+  </g>
+
+  <!-- DB -->
+  <g class="sans">
+    <rect class="box" x="954" y="84" width="278" height="132" rx="14" stroke="#1E40AF"/>
+    <text x="974" y="114" font-size="15" class="h">PostgreSQL</text>
+    <text x="974" y="140" font-size="22" font-weight="800" fill="#93C5FD">13<tspan font-size="13" font-weight="500" fill="#9CA3AF"> tables · 41 Alembic migrations</tspan></text>
+    <text x="974" y="166" font-size="13" class="s">orgs → boards → panels → posts</text>
+    <text x="974" y="186" font-size="13" class="s">roles · role groups · goals</text>
+    <text x="974" y="204" font-size="13" class="s">indexed, cascade-safe</text>
+  </g>
+
+  <path class="wire" d="M248 150 H296" marker-end="url(#ar)"/>
+  <path class="flow" d="M248 150 H296" stroke="#34D399"/>
+  <path class="wire" d="M550 150 H598" marker-end="url(#ar)"/>
+  <path class="flow" d="M550 150 H598" stroke="#34D399"/>
+  <path class="wire" d="M902 150 H950" marker-end="url(#ar)"/>
+  <path class="flow" d="M902 150 H950" stroke="#60A5FA"/>
+
+  <!-- Integrations -->
+  <g class="sans" font-size="13">
+    <text x="602" y="254" class="mono" font-size="12" fill="#6B7280" letter-spacing="1.5">INTEGRATIONS</text>
+    <rect class="box" x="602" y="266" width="140" height="40" rx="10"/>
+    <text x="672" y="291" text-anchor="middle" class="h">Stripe billing</text>
+    <rect class="box" x="762" y="266" width="140" height="40" rx="10"/>
+    <text x="832" y="291" text-anchor="middle" class="h">Firebase Auth</text>
+    <rect class="box" x="954" y="266" width="130" height="40" rx="10"/>
+    <text x="1019" y="291" text-anchor="middle" class="h">Cloud Storage</text>
+    <rect class="box" x="1102" y="266" width="130" height="40" rx="10"/>
+    <text x="1167" y="291" text-anchor="middle" class="h">Mailgun</text>
+  </g>
+
+  <!-- AI Coach -->
+  <g class="sans">
+    <rect x="48" y="246" width="502" height="182" rx="16" fill="url(#ai)" stroke="#7C3AED" stroke-width="1.5"/>
+    <text x="68" y="276" font-size="15" class="h">AI Growth Coach</text>
+    <text x="68" y="296" font-size="12.5" class="mono" fill="#C4B5FD">per-user KPI analysis · answers in Japanese business keigo</text>
+
+    <g class="step k1"><rect x="68" y="314" width="106" height="62" rx="10" fill="#111827" stroke="#4C1D95"/>
+      <text x="121" y="340" text-anchor="middle" font-size="13" class="h">KPI extract</text>
+      <text x="121" y="360" text-anchor="middle" font-size="11.5" class="s">skew · edge cases</text></g>
+    <g class="step k2"><rect x="186" y="314" width="106" height="62" rx="10" fill="#111827" stroke="#B91C1C"/>
+      <text x="239" y="340" text-anchor="middle" font-size="13" class="h">Sanitize</text>
+      <text x="239" y="360" text-anchor="middle" font-size="11.5" class="s">injection filters</text></g>
+    <g class="step k3"><rect x="304" y="314" width="106" height="62" rx="10" fill="#111827" stroke="#7C3AED"/>
+      <text x="357" y="340" text-anchor="middle" font-size="13" class="h">LLM</text>
+      <text x="357" y="360" text-anchor="middle" font-size="11.5" class="s">Llama 3.3 70B</text></g>
+    <g class="step k4"><rect x="422" y="314" width="108" height="62" rx="10" fill="#111827" stroke="#15803D"/>
+      <text x="476" y="340" text-anchor="middle" font-size="13" class="h">Validate</text>
+      <text x="476" y="360" text-anchor="middle" font-size="11.5" class="s">no invented #s</text></g>
+    <text x="68" y="408" font-size="13" fill="#DDD6FE">3× engagement lift · daily opens 2 → 6+</text>
+  </g>
+  <path class="wire" d="M174 345 H182" marker-end="url(#ar)"/>
+  <path class="wire" d="M292 345 H300" marker-end="url(#ar)"/>
+  <path class="wire" d="M410 345 H418" marker-end="url(#ar)"/>
+  <path class="wire" d="M602 200 H578 V300 H554" marker-end="url(#ar)"/>
+  <path class="flow" d="M602 200 H578 V300 H554" stroke="#A78BFA"/>
+
+  <!-- Delivery band -->
+  <g class="sans">
+    <rect x="602" y="330" width="630" height="98" rx="14" fill="#0B1220" stroke="#1F2937"/>
+    <text x="626" y="358" font-size="12" class="mono" fill="#6B7280" letter-spacing="1.5">DELIVERY · GCP</text>
+    <text x="626" y="386" font-size="14" fill="#D1D5DB">Docker  →  Cloud Build  →  Cloud Run  (staging + production)</text>
+    <text x="626" y="410" font-size="13" class="s">pytest unit + integration · ESLint · Prettier · Husky pre-commit</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="48" y="478" class="sans" font-size="15" fill="#E5E7EB" font-weight="600">Same trust rule as FinSage: the coach may only quote numbers that exist in the user's own KPI data.</text>
+  <text x="48" y="504" class="sans" font-size="14" fill="#9CA3AF">Every figure in the response is checked against the input payload; invented numbers and unknown KPI names come back as hallucination warnings.</text>
+</svg>

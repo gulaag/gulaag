@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="t d">
+  <title id="t">FinSage impact</title>
+  <desc id="d">Answer accuracy on a 100-question SEC-verified benchmark rises from 33 percent for the base model answering directly to 87 percent with the FinSage agent. 728 filings, 80,000+ pages, 45,136 embeddings, 100 percent citation coverage, 8 evaluation scorers, 4 tools, zero LangChain.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0E1A"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+      .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+      .bar{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);animation:grow 1.6s cubic-bezier(.2,.8,.2,1) forwards}
+      .b2{animation-delay:.6s}
+      @keyframes grow{to{transform:scaleX(1)}}
+      .pop{opacity:0;animation:pop .6s ease-out forwards}
+      .p0{animation-delay:1.4s}.p1{animation-delay:2.0s}
+      .t1{animation-delay:.2s}.t2{animation-delay:.35s}.t3{animation-delay:.5s}.t4{animation-delay:.65s}.t5{animation-delay:.8s}.t6{animation-delay:.95s}
+      @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+      .tile rect{fill:#111827;stroke:#1F2937}
+      .shine{animation:shine 3.5s ease-in-out 2.4s infinite}
+      @keyframes shine{0%,100%{opacity:.0}50%{opacity:.35}}
+    </style>
+  </defs>
+
+  <rect width="1280" height="440" rx="20" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="1279" height="439" rx="20" fill="none" stroke="#1F2937"/>
+
+  <text x="56" y="64" class="mono" font-size="14" fill="#22D3EE" letter-spacing="2">FLAGSHIP · FINSAGE</text>
+  <text x="56" y="100" class="sans" font-size="28" font-weight="800" fill="#F9FAFB">The agent took answer accuracy from 33% to 87%.</text>
+  <text x="56" y="130" class="sans" font-size="16" fill="#9CA3AF">Same model, same 100 SEC-verified questions. The difference is tools, routing, guardrails and evals.</text>
+
+  <!-- Bars -->
+  <g class="sans">
+    <text x="56" y="188" font-size="15" fill="#D1D5DB" font-weight="600">Base model, answering directly</text>
+    <rect x="56" y="200" width="620" height="40" rx="10" fill="#111827"/>
+    <rect class="bar" x="56" y="200" width="204.6" height="40" rx="10" fill="#4B5563"/>
+    <text class="pop p0 mono" x="276" y="227" font-size="20" font-weight="700" fill="#D1D5DB">33%</text>
+
+    <text x="56" y="282" font-size="15" fill="#F9FAFB" font-weight="700">FinSage agent (tool calling + RAG + guardrails)</text>
+    <rect x="56" y="294" width="620" height="40" rx="10" fill="#111827"/>
+    <rect class="bar b2" x="56" y="294" width="539.4" height="40" rx="10" fill="url(#win)"/>
+    <rect class="shine" x="56" y="294" width="539.4" height="40" rx="10" fill="#FFFFFF"/>
+    <text class="pop p1 mono" x="611" y="321" font-size="20" font-weight="800" fill="#FFFFFF">87%</text>
+
+    <text x="56" y="378" class="mono" font-size="13" fill="#6B7280">100-question stratified gold set · 8 scorers (2 LLM-as-judge + 6 programmatic)</text>
+    <text x="56" y="400" class="mono" font-size="13" fill="#6B7280">figures served only from audited Gold tables, never from RAG</text>
+  </g>
+
+  <!-- Stat tiles -->
+  <g class="sans">
+    <g class="tile pop t1"><rect x="728" y="164" width="236" height="78" rx="14"/>
+      <text x="748" y="200" font-size="26" font-weight="800" fill="#F9FAFB">728</text>
+      <text x="748" y="226" font-size="14" fill="#9CA3AF">SEC 10-K / 10-Q filings</text></g>
+    <g class="tile pop t2"><rect x="980" y="164" width="244" height="78" rx="14"/>
+      <text x="1000" y="200" font-size="26" font-weight="800" fill="#F9FAFB">80,000+</text>
+      <text x="1000" y="226" font-size="14" fill="#9CA3AF">pages of source text</text></g>
+    <g class="tile pop t3"><rect x="728" y="256" width="236" height="78" rx="14"/>
+      <text x="748" y="292" font-size="26" font-weight="800" fill="#A5F3FC">45,136</text>
+      <text x="748" y="318" font-size="14" fill="#9CA3AF">BGE-large embeddings</text></g>
+    <g class="tile pop t4"><rect x="980" y="256" width="244" height="78" rx="14"/>
+      <text x="1000" y="292" font-size="26" font-weight="800" fill="#86EFAC">100%</text>
+      <text x="1000" y="318" font-size="14" fill="#9CA3AF">citation coverage</text></g>
+    <g class="tile pop t5"><rect x="728" y="348" width="236" height="64" rx="14"/>
+      <text x="748" y="388" font-size="18" font-weight="800" fill="#C4B5FD">4 tools<tspan font-weight="500" fill="#9CA3AF" font-size="14">  function calling</tspan></text></g>
+    <g class="tile pop t6"><rect x="980" y="348" width="244" height="64" rx="14"/>
+      <text x="1000" y="388" font-size="18" font-weight="800" fill="#FCD34D">0 LangChain<tspan font-weight="500" fill="#9CA3AF" font-size="14">  owned harness</tspan></text></g>
+  </g>
+</svg>
